@@ -208,10 +208,45 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Анимация */
+/* .hero-button {
+  position: relative;
+  transition: background-color 250ms linear, color 250ms linear;
+  overflow: hidden;
+}
 .hero-button:hover,
 .hero-button:focus {
-  background-color: var(--hover-color);
+  background-color: #fff;
+  color: var(--hover-color);
 }
+.hero-button::before {
+  display: inline-block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: violet;
+  transition: transform 250ms linear;
+}
+.hero-button::after {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  display: inline-block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: rgb(17, 228, 69);
+  transition: transform 250ms linear;
+  transform: translateY(calc(-50% + 45px));
+}
+
+.hero-button:hover::before {
+  transform: translateY(-45px);
+}
+.hero-button:hover::after {
+  transform: translateY(-50%);
+} */
 /* Особенности */
 
 .particular {
@@ -611,18 +646,20 @@ img {
   border-left: 1px solid #eeeeee;
   border-radius: 1px;
 }
+
+/* Модальное окно */
 .backdrop.is-hidden {
-  /* visibility: hidden; */
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 .backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .modal {
   position: absolute;
